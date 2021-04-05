@@ -10,21 +10,6 @@ Email: support@thenanosoft.com
 import requests
 from bs4 import BeautifulSoup
 
-# input from user pinterest video link
-url = input()
-
-# generate api link
-videoLinkApi = "https://pinterest-video-api.herokuapp.com/"+ url
-
-# parsing html data
-request = requests.get(videoLinkApi)
-soup = BeautifulSoup(request.content, "html.parser")
-
-# Convert Video Link into String
-videoLink = str(soup)
-
-# remove quotation marks from string at starting and ending points
-videoLink = videoLink.strip('\"')
 
 # function for download video
 def download_file(url):
@@ -43,4 +28,27 @@ def download_file(url):
                 
     return local_filename
 
-download_file(videoLink)
+
+with open("url.txt", 'r') as file:
+    # read first line
+    url = file.readline()
+
+    while url:
+        # generate api link
+        videoLinkApi = "https://pinterest-video-api.herokuapp.com/"+ url
+        
+        # parsing html data
+        request = requests.get(videoLinkApi)
+        soup = BeautifulSoup(request.content, "html.parser")
+
+        # Convert Video Link into String
+        videoLink = str(soup) 
+
+        # remove quotation marks from string at starting and ending points
+        videoLink = videoLink.strip('\"')
+
+        # download video file & print file name
+        print(download_file(videoLink))
+
+        # read until the lines end
+        url = file.readline()
