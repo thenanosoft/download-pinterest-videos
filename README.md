@@ -3,25 +3,30 @@
 
 ## Install
 
-```pip install requests```
+```py
+pip install requests
+```
 
-```pip install beautifulsoup4```
+```py
+pip install beautifulsoup4
+```
 
 or run this command  
 
-```pip install -r requirements.txt```  
+```py
+pip install -r requirements.txt
+```  
 
 ## Usage
 
 Open pinterest in browser and copy pinterest video link.
 
 Example:  
-```https://www.pinterest.com/pin/613474780485447568/```
+https://www.pinterest.com/pin/1234567890/
 
 ## Run
 
 start python script and paste copied link as input.
-
 ___
 
 ## Follow Us
