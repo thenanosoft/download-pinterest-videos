@@ -28,6 +28,7 @@ def download_file(url):
                 
     return local_filename
 
+print('------ ------ ------ Downloading Start ------ ------ ------\n')
 
 with open("url.txt", 'r') as file:
     # read first line
@@ -52,3 +53,5 @@ with open("url.txt", 'r') as file:
 
         # read until the lines end
         url = file.readline()
+
+print('\n ------ ------ ------ Downloading Completed ------ ------ ------')
