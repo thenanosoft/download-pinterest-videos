@@ -1,6 +1,10 @@
 
 # Download Pinterest Video | Nanosoft
 
+## Update
+**Bulk video feature added**  
+create a new file in same directory with the name of ```url.txt``` and paste all url in txt file. ```1 Line 1 URL```.
+
 ## Install
 
 ```py
